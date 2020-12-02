@@ -53,3 +53,14 @@ app.listen(3000, ()=>{
 ```
 
 #### Step 3: MONGO DB Connection & Collections
+* Created a folder "data" - holds all the operations/files that interact with Mongo
+
+settings.json 
+```
+{
+  "mongoConfig": {
+    "serverUrl": "mongodb://localhost:27017/",
+    "database": "Flyer_Creator_CS546"
+  }
+}
+```
