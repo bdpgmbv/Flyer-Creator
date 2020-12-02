@@ -1,4 +1,4 @@
-#### Basic Requirements for the Application
+#### Step 1: Basic Requirements for the Application
 
 app.js 
 * Used for initial import of express, body-parser, express-session, express-handlebars
@@ -46,3 +46,10 @@ app.listen(3000, ()=>{
     console.log("Server is running on http://localhost:3000");
 });
 ```
+
+#### Step 2: Add the below script in package.json in "scripts" Object
+```
+"start": "node app.js"
+```
+
+#### Step 3: MONGO DB Connection & Collections
