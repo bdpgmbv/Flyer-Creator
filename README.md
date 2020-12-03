@@ -98,3 +98,18 @@ index.js
     1. If Session authorization is true - let the user navigate to flyers page
     2. If Session authorization is true - let the user navigate to private page 
 * Render the Error handlebar for any other url requests, expect the ones defined 
+
+
+Steps to start the project:
+
+* Create a folder, Open the folder in Visual studio code, Open the terminal at the folder and do "git init"
+* Now install the required packages you need 
+    * npm install bcrypt
+    * npm install bcryptjs
+    * npm install body-parser
+    * npm install express --save
+    * npm install express-handlebars
+    * npm install express-session
+    * npm install jquery
+    * npm install mongodb --save
+    * npm install node-uuid 
