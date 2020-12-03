@@ -88,3 +88,7 @@ module.export = {
     templateFlyers: templateFlyersData
 };
 ```
+#### Step 4: API 
+index.js
+* The app opens with the Login Handlebar, allowing the user to enter the login details.
+* If it is a *valid login*(existing user exist in DB), We set up a Session Cookie 
