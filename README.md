@@ -91,4 +91,10 @@ module.export = {
 #### Step 4: API 
 index.js
 * The app opens with the Login Handlebar, allowing the user to enter the login details.
-* If it is a *valid login*(existing user exist in DB), We set up a Session Cookie 
+* If it is a **valid login** (existing user exist in DB), We set up a **Session Cookie** with all details of the User. 
+* If it is **not a valid login**, user navigates back to login page with errors
+* If any **field data is missing for login**, user navigates back to login page with errors
+* Handling all the Navigations of the App in index.js. Navigations Handled are:
+    1. If Session authorization is true - let the user navigate to flyers page
+    2. If Session authorization is true - let the user navigate to private page 
+* Render the Error handlebar for any other url requests, expect the ones defined 
