@@ -54,8 +54,7 @@ app.listen(3000, ()=>{
 
 #### Step 3: MONGO DB Connection & Collections
 * Created a folder "data" - holds all the operations/files that interact with Mongo
-
-settings.json 
+* settings.json : define the Database Name and the URL to the Mongo 
 ```
 {
   "mongoConfig": {
@@ -63,4 +62,29 @@ settings.json
     "database": "Flyer_Creator_CS546"
   }
 }
+```
+* mongoConnection.js: helper file to connect to Mongo DB
+* mongoCollections.js: file to setup the collections we need in DB. We specify the collection names we are going to use like 
+```
+module.exports = {
+    users: getCollectionFn("users"),
+    userFlyers: getCollectionFn("userFlyers"),
+    templateFlyers: getCollectionFn("templateFlyers")
+};
+```
+* Below files in the "data" implements operations we can perform on DB on each collection 
+    * users.js - getAll, get, getByEmailAndPass, getByEmail, remove, addFlyer, removeFlyer, create
+    * userFlyers.js -  getAll, get, updateElement, create, remove
+    * templateFlyers.js - getAll, get, create, remove
+* index.js - Everytime the compiler looks at the index.js of every folder, so we bring up all the Operational files in index.js in a way to nominate its existence
+```
+const usersData = require("./users");
+const userFlyersData = require("./userFlyers");
+const templateFlyersData = require("./templateFlyers");
+
+module.export = {
+    users: usersData,
+    userFlyers: userFlyersData,
+    templateFlyers: templateFlyersData
+};
 ```
