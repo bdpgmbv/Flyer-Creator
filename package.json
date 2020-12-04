@@ -1,0 +1,27 @@
+{
+  "name": "cs546project",
+  "version": "1.0.0",
+  "description": "Final project for Web Programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "seed": "node ./tasks/seed.js"
+  },
+  "author": "Vyshali Prabananth Lal",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "install": "^0.13.0",
+    "jquery": "^3.5.1",
+    "mongodb": "^3.6.3",
+    "node-uuid": "^1.4.8",
+    "npm": "^6.14.9",
+    "xss": "^1.0.8"
+  }
+}
