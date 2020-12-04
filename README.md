@@ -113,6 +113,26 @@ Steps to start the project:
     * npm install jquery
     * npm install mongodb --save
     * npm install node-uuid 
-* Created seetings.json, mongoConnection, mongoCollection.js, templateFlyers.js
+* Created a folder - "data" and wrote seetings.json, mongoConnection, mongoCollection.js, templateFlyers.js
 * Wrote seed.js to seed in all the initial data 
 * Changed the package.json scripts to run seed.js and ran "npm run seed", and now when you see the MONGO COMPASS, you can see your DB and the Flyer templates data fed.
+```
+"seed": "node ./tasks/seed.js"
+```
+* Created a folder - views(that holds all the Handlebars), inside which created a folder - "layouts" and wrote main.handlebars. Included the CDNs for Bootstarp, JQuery, Popper(used for Modal), totally. **Included the folder that contains our JQuery code for the Application"** Made sure to add the CDNs in correct order. 
+```
+    <link rel="stylesheet" href="/public/css/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <script src="/public/js/main.js"></script>
+    <script src="/public/js/saveAndShare.js"></script>
+    <script src="/public/js/tota11y.min.js"></script>
+```
