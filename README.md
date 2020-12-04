@@ -113,3 +113,6 @@ Steps to start the project:
     * npm install jquery
     * npm install mongodb --save
     * npm install node-uuid 
+* Created seetings.json, mongoConnection, mongoCollection.js, templateFlyers.js
+* Wrote seed.js to seed in all the initial data 
+* Changed the package.json scripts to run seed.js and ran "npm run seed", and now when you see the MONGO COMPASS, you can see your DB and the Flyer templates data fed.
