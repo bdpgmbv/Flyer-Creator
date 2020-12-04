@@ -136,3 +136,8 @@ Steps to start the project:
     <script src="/public/js/saveAndShare.js"></script>
     <script src="/public/js/tota11y.min.js"></script>
 ```
+* Creating Login & Register Page and the required routes 
+    * Created a folder called admin and wrote "loginh.handlebars"
+    * Created "registerh.handlebars"
+        * The form description is - form action="/register" method="POST"
+    * Wrote register.js under routes folder. Developed 2 functions to handle - router.get("/", and router.post("/",
