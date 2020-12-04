@@ -143,7 +143,7 @@ Steps to start the project:
     * Wrote register.js under routes folder. Developed 2 functions to handle - router.get("/", and router.post("/",. 
     * When we write validations in our route, it happens only after the form is submitted.
     * Now we will have to check if the user enters a valid email or not an existing user when the user enters the email address and goes to the next field, so using JQuery to do the validations.
-    * To write Jquery, added "<output id="checkUsername"></output>" & "<output id="checkpassword"></output>" in div 
+    * To write Jquery, added <output id="checkUsername"></output> & <output id="checkpassword"></output> in div 
     ```
     <div class="form-label group">
     <label for="email">Email
