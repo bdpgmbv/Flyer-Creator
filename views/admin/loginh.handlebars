@@ -1,0 +1,37 @@
+<br>
+<h1 class="welcome"> Welcome to Flyer Creater </h1>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-5 col-lg-3 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-header">
+                    <h2 class="welcome"> Login </h2>
+                </div>
+                <div class="card-body">
+                    <form action="/login" method="POST" id="login-form">
+                        <div class="form-label group">
+                            <label for="username">Email
+                                <input type="text" id="username" name="username" class="form-control"></label>
+                        </div>
+                        <div class="form-label group">
+                            <label for="password"> Password
+                                <input type="password" id="password" name="password"
+                                    class="form-control my-narrow-input"></label>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary btn-block" type="submit">Login</button>
+                    </form>
+                    <br>
+                    {{#if hasErrorsDuringLogin}}
+                    <p class="error">You did not enter a valid username and/or password</p>
+                    {{/if}}
+                    <p>Don't have an account? <a href="/register" class="links">
+                            Register
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

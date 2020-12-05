@@ -44,9 +44,16 @@ let get = async function get(id) {
     return flyer;
 }
 
+let getAll = async function getAll(){
+    const flyersCollection = await flyers();
+    const allFlyers = await flyersCollection.find({}).toArray();
+    return allFlyers;
+}
+
 module.exports = {
     create,
-    get
+    get,
+    getAll
 };
 
 
