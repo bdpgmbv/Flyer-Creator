@@ -22,6 +22,52 @@ let get = async function get(id) {
     return flyer;
 }
 
+let updateElement = async function updateElement(id, elementid, text, color, size) {
+    if (!id) throw "You must provide an id to search for";
+    if (!isValidNum(elementid) || elementid < 0 || elementid > 3) throw "You must provide an element id to update";
+    isValidString(text);
+    isValidString(color);
+    isValidString(size);
+
+    const flyersCollection = await flyers();
+
+    const flyer = await get(id);
+
+    let newElements = flyer.elements;
+    newElements[elementid] = {
+        text: text,
+        color: color,
+        size: size
+    };
+
+    return flyersCollection
+        .updateOne({ _id: id }, { $set: { elements: newElements } })
+        .then(function () {
+            return get(id);
+        });
+}
+
+let create = async function create(background, elements) {
+    isValidString(background);
+    if (!elements) throw "You must provide elements";
+    const flyersCollection = await flyers();
+
+    let newFlyer = {
+        _id: uuid.v4(),
+        background: background,
+        elements: elements
+    };
+
+    const insertInfo = await flyersCollection.insertOne(newFlyer);
+    if (insertInfo.insertedCount === 0) throw "Could not add flyer";
+
+    const newId = insertInfo.insertedId;
+    const flyer = await get(newId);
+    return flyer;
+}
+
 module.exports = {
-    get
+    get,
+    updateElement,
+    create
 };
