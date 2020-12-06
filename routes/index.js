@@ -1,7 +1,7 @@
 const session = require("express-session");
 const registerRoutes = require("./register");
 const users = require("../data/users");
-const flyerRoutes = require("./flyers");
+const templateFlyersRoutes = require("./templateFlyers");
 const bcrypt = require("bcrypt");
 
 const constructMethod = app => {
@@ -66,7 +66,7 @@ const constructMethod = app => {
             req.session.firstName=user.firstName;
             req.session.lastName=user.lastName;
             req.session.flyers=user.flyers;
-            res.redirect("/flyers"); // redirecting to route
+            res.redirect("/templateFlyers"); // redirecting to route
         } else {
             res.render("admin/loginh", {
                 hasErrorsDuringLogin: true
@@ -79,7 +79,7 @@ const constructMethod = app => {
 
     // ** important to specify this ** //
     app.use("/register",registerRoutes);
-    app.use("/flyers",flyerRoutes);
+    app.use("/templateFlyers",templateFlyersRoutes);
     
     app.get("*", (req, res) => {
         res.status(404).send("error 404: page not found");

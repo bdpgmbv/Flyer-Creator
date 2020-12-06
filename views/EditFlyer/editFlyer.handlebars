@@ -1,0 +1,100 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-default fixed-top">
+        <a class="navbar-brand navbar-light">
+            <h1 class="brand">Flyer Creater </h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="nav navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="/">
+                        <h2 class="side-link">Home</h2>
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/private">
+                        <h2 class="side-link">My Profile</h2>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="/logout">
+                        <h2 class="side-link">Logout</h2>
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <h3 class="welcome">
+        Flyer Editor
+    </h3>
+</div>
+<br>
+<div class="card-main-div" style="background:url('/public/images/{{background}}') no-repeat;" id="{{id}}">
+    <div class="card-text-wrapper">
+        <div class="content-div content-1-div">
+            <span style="border: 1px dashed; color:{{element1.color}}; font-size:{{element1.size}};"
+                class="edit-custom-generic edit-custom-text1">{{element1.text}}</span>
+        </div>
+        <div class="content-div content-1-div">
+            <span style="border: 1px dashed; color:{{element2.color}}; font-size:{{element2.size}};"
+                class="edit-custom-generic edit-custom-text2">{{element2.text}}</span>
+        </div>
+        <div class="content-div content-1-div">
+            <span style="border: 1px dashed; color:{{element3.color}}; font-size:{{element3.size}};"
+                class="edit-custom-generic edit-custom-text3">{{element3.text}}</span>
+        </div>
+        <div class="content-div content-1-div">
+            <span style="border: 1px dashed; color:{{element4.color}}; font-size:{{element4.size}};"
+                class="edit-custom-generic edit-custom-text4">{{element4.text}}</span>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Edit Fields</h4>
+                <div class="dropdown">
+                    <button class="btn btn-color dropdown-toggle" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Black
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <button class="dropdown-item color-choice" type="button">Black</button>
+                        <button class="dropdown-item color-choice" type="button">Blue</button>
+                        <button class="dropdown-item color-choice" type="button">Green</button>
+                        <button class="dropdown-item color-choice" type="button">Red</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-size dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        20px
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item font-size" type="button">10px</button>
+                        <button class="dropdown-item font-size" type="button">15px</button>
+                        <button class="dropdown-item font-size" type="button">20px</button>
+                        <button class="dropdown-item font-size" type="button">25px</button>
+                    </div>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <textarea class="text-tobe-saved1"></textarea>
+                <textarea class="text-tobe-saved2"></textarea>
+                <textarea class="text-tobe-saved3"></textarea>
+                <textarea class="text-tobe-saved4"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn save-flyer-action btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

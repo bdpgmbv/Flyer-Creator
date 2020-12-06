@@ -1,0 +1,170 @@
+body{
+    background-image: url("login-bg.png");
+}
+
+.content-div span {
+    cursor: pointer;
+    display: inline-block;
+    white-space: initial;
+}
+
+
+.card-text-wrapper {
+    margin: 0px auto !important;
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 17%;
+    width: 80%;
+}
+
+.content-div {
+    line-height: 1.4;
+    padding: 12%;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* .card-main-div{
+    background-size: 100% auto !important; 
+} */
+.card-main-div {
+    width: 420px;
+    height: 595px !important;
+    background-size: 100% auto !important;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: initial;
+}
+.card-text-wrapper{
+    top: 7%;
+    bottom: auto;
+}
+
+.edit-custom-text1{
+    white-space: initial
+}
+
+/* .col-md-6{
+    margin-left: auto;
+    margin-right: auto; 
+} */
+
+.template-image-wrapper{
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.template-image-wrapper img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-left: auto !important;
+    margin-right: auto !important;    
+  }
+
+.card-outer-wrapper {
+    max-width: 900px;
+    margin: 0px auto !important;
+    padding: 10px;
+}
+
+.nav{
+    display: inline;
+    text-align: center;
+    padding: 5px;
+
+}
+.logo{
+    display: inline;
+    font-family: Arial;
+    font-size: 30px;
+}
+    
+
+.logout{
+    text-align: center;
+}
+
+.error{
+    color: rgb(152, 16, 16);
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.welcome{
+    text-align: center;
+}
+
+.login-fields{
+    margin: auto;
+}
+
+.reg-table{
+    margin:auto;
+}
+
+p{
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: #1a5ca3 !important;
+}
+.links{
+    color: #1a5ca3;
+}
+.back-to-log{
+    color: #1a5ca3;
+}
+
+.brand{
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+.nav-item{
+    font-size: 25px;
+}
+
+.navbar-default{
+    background-color: #2c4661;
+}
+
+.active{
+    color: #fdb26b; 
+}
+.main-link{
+    color: white; 
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.side-link{
+    color: #ffdab8;
+    font-size: 25px;
+    text-align: center;
+}
+
+.jumbotron{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.form-control{
+    size: 35;
+}
+
+.label-l{
+    width: 400px;
+}
