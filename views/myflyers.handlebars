@@ -1,0 +1,72 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-default fixed-top">
+        <a class="navbar-brand navbar-light">
+            <h1 class="brand">Flyer Creater </h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="/">
+                        <h2 class="side-link">Home</h2>
+                    </a>
+                </li>
+                <li class="nav-item active"><a class="nav-link" href="/private">
+                        <h2 class="main-link">My Profile</h2><span class="sr-only">(current)</span>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="/logout">
+                        <h2 class="side-link">Logout</h2>
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+{{!-- <div>
+    <ul class=navbar>
+        <li class=logo> Flyer Creater </li>
+        <li class=nav><a href="/">Home</a></li>
+        <li class=nav><a href="/private">My Profile</a></li>
+        <li class=nav><a href="/logout">Logout</a></li>
+    </ul>
+</div> --}}
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1 class="welcome">Hello, {{firstName}} {{lastName}}</h1><br>
+        <h2 class="welcome">Flyers you have made</h2>
+    </div>
+</div>
+<div>
+    {{#if hasFlyers}}
+    {{#each flyers}}
+    <br>
+    <br>
+    <div class="card-main-div" style="background:url('/public/images/{{background}}') no-repeat;">
+        <a href="/private/{{id}}">
+            <div class="card-text-wrapper">
+                <div class="content-div content-1-div">
+                    <span style="color:{{element1.color}}; font-size:{{element1.size}};"
+                        class="">{{element1.text}}</span>
+                </div>
+                <div class="content-div content-1-div">
+                    <span style="color:{{element2.color}}; font-size:{{element2.size}};"
+                        class="">{{element2.text}}</span>
+                </div>
+                <div class="content-div content-1-div">
+                    <span style="color:{{element3.color}}; font-size:{{element3.size}};"
+                        class="">{{element3.text}}</span>
+                </div>
+                <div class="content-div content-1-div">
+                    <span style="color:{{element4.color}}; font-size:{{element4.size}};"
+                        class="">{{element4.text}}</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+    {{/each}}
+    {{/if}}
+</div>
